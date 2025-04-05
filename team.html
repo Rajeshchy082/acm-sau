@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team | ACM SAU</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 pt-20 min-h-screen pb-40">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-blue-800 text-white p-4 flex justify-between items-center z-50 shadow">
+    <div class="text-xl font-bold">ACM SAU</div>
+    <div class="space-x-4 hidden md:flex items-center relative">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="events.html" class="hover:underline">Events</a>
+      <a href="team.html" class="hover:underline font-bold underline">Team</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+      <div class="relative group">
+        <button class="hover:underline">More ▾</button>
+        <div class="absolute hidden group-hover:block bg-white dark:bg-gray-800 text-black dark:text-white mt-2 w-56 rounded shadow z-50 border dark:border-gray-600 right-0">
+          <a href="gallery.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📸 Gallery</a>
+          <a href="news.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📰 News / Blog</a>
+          <a href="resources.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📚 Resources</a>
+          <a href="projects.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">🚀 Projects</a>
+          <a href="workshops.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">🎓 Workshops</a>
+        </div>
+      </div>
+      <button onclick="toggleDarkMode()" class="ml-2 text-sm bg-gray-700 px-2 py-1 rounded hover:bg-gray-600">🌓</button>
+    </div>
+    <button class="md:hidden text-white text-xl" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="menu" class="md:hidden hidden bg-blue-800 text-white px-4 pb-4">
+    <a href="index.html" class="block py-2 hover:underline">Home</a>
+    <a href="about.html" class="block py-2 hover:underline">About</a>
+    <a href="events.html" class="block py-2 hover:underline">Events</a>
+    <a href="team.html" class="block py-2 underline font-bold">Team</a>
+    <a href="contact.html" class="block py-2 hover:underline">Contact</a>
+    <div class="border-t border-blue-400 mt-2 pt-2">
+      <a href="gallery.html" class="block py-2 hover:underline">📸 Gallery</a>
+      <a href="news.html" class="block py-2 hover:underline">📰 News / Blog</a>
+      <a href="resources.html" class="block py-2 hover:underline">📚 Resources</a>
+      <a href="projects.html" class="block py-2 hover:underline">🚀 Projects</a>
+      <a href="workshops.html" class="block py-2 hover:underline">🎓 Workshops</a>
+    </div>
+    <button onclick="toggleDarkMode()" class="mt-2 text-sm bg-gray-700 px-2 py-1 rounded hover:bg-gray-600 w-full">🌓 Toggle Mode</button>
+  </div>
+
+  <!-- Team Section -->
+  <section class="py-16 px-6 bg-white dark:bg-gray-800 shadow">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-blue-900 dark:text-blue-300 mb-10">Meet Our Team</h2>
+      <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
+        <!-- Member Card -->
+        <div onclick="openModal('rajesh')" class="cursor-pointer bg-gray-100 dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-xl transition hover:bg-blue-50 dark:hover:bg-blue-900">
+          <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full mx-auto w-24 h-24 mb-4" />
+          <h3 class="text-lg font-semibold text-blue-800 dark:text-blue-100">Rajesh Chowdhury</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Tech</p>
+          <div class="mt-3 space-x-3 text-blue-600 dark:text-blue-400">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="mailto:rajesh@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+
+          <!-- Member 2 -->
+     
+          <div onclick="openModal('vaishali')" class="cursor-pointer bg-gray-100 dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-xl transition hover:bg-blue-50 dark:hover:bg-blue-900">
+            <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full mx-auto w-24 h-24 mb-4" />
+            <h3 class="text-lg font-semibold text-blue-800 dark:text-blue-100">Vaishali Jain</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Networking</p>
+            <div class="mt-3 space-x-3 text-blue-600 dark:text-blue-400">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:rajesh@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+          </div>
+
+          <div onclick="openModal('bhoomi')" class="cursor-pointer bg-gray-100 dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-xl transition hover:bg-blue-50 dark:hover:bg-blue-900">
+            <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full mx-auto w-24 h-24 mb-4" />
+            <h3 class="text-lg font-semibold text-blue-800 dark:text-blue-100">Bhoomi</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Networking</p>
+            <div class="mt-3 space-x-3 text-blue-600 dark:text-blue-400">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:rajesh@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+          </div>
+          <div onclick="openModal('mukul')" class="cursor-pointer bg-gray-100 dark:bg-gray-700 p-6 rounded-xl shadow hover:shadow-xl transition hover:bg-blue-50 dark:hover:bg-blue-900">
+            <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full mx-auto w-24 h-24 mb-4" />
+            <h3 class="text-lg font-semibold text-blue-800 dark:text-blue-100">Mukul</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Networking</p>
+            <div class="mt-3 space-x-3 text-blue-600 dark:text-blue-400">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:rajesh@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+          </div>
+
+        <!-- Add more members as needed -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Templates (Updated with Dark Mode Backgrounds) -->
+  <div id="rajesh" class="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 hidden">
+    <div class="bg-white dark:bg-gray-700 p-8 rounded-xl max-w-md w-full relative">
+      <button onclick="closeModal('rajesh')" class="absolute top-2 right-3 text-gray-500 hover:text-black dark:text-white text-xl">&times;</button>
+      <img src="https://via.placeholder.com/150" class="w-24 h-24 rounded-full mx-auto mb-4" />
+      <h3 class="text-xl font-bold text-blue-800 dark:text-blue-100 text-center">Rajesh Chowdhury</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300 text-center mb-4">Tech</p>
+      <p class="text-gray-700 dark:text-gray-200 text-sm mb-4 text-center">Rajesh is a software developer passionate about networking, AI, and open-source education.</p>
+      <div class="flex justify-center space-x-4 text-blue-700 dark:text-blue-400 text-xl">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="mailto:rajesh@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="vaishali" class="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 hidden">
+    <div class="bg-white dark:bg-gray-700 p-8 rounded-xl max-w-md w-full relative">
+      <button onclick="closeModal('vaishali')" class="absolute top-2 right-3 text-gray-500 hover:text-black dark:text-white text-xl">&times;</button>
+      <img src="https://via.placeholder.com/150" class="w-24 h-24 rounded-full mx-auto mb-4" />
+      <h3 class="text-xl font-bold text-blue-800 dark:text-blue-100 text-center">Vaishali Jain</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300 text-center mb-4">Networking</p>
+      <p class="text-gray-700 dark:text-gray-200 text-sm mb-4 text-center">Vashali is a software developer passionate about networking, AI, and open-source education.</p>
+      <div class="flex justify-center space-x-4 text-blue-700 dark:text-blue-400 text-xl">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="mailto:rajesh@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="bhoomi" class="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 hidden">
+    <div class="bg-white dark:bg-gray-700 p-8 rounded-xl max-w-md w-full relative">
+      <button onclick="closeModal('bhoomi')" class="absolute top-2 right-3 text-gray-500 hover:text-black dark:text-white text-xl">&times;</button>
+      <img src="https://via.placeholder.com/150" class="w-24 h-24 rounded-full mx-auto mb-4" />
+      <h3 class="text-xl font-bold text-blue-800  dark:text-blue-100 text-center">Bhoomi</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300 text-center mb-4">Networking</p>
+      <p class="text-gray-700 dark:text-gray-200 text-sm mb-4 text-center">Vashali is a software developer passionate about networking, AI, and open-source education.</p>
+      <div class="flex justify-center space-x-4 text-blue-700 dark:text-blue-400 text-xl">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="mailto:rajesh@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="mukul" class="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 hidden">
+    <div class="bg-white dark:bg-gray-700 p-8 rounded-xl max-w-md w-full relative">
+      <button onclick="closeModal('mukul')" class="absolute top-2 right-3 text-gray-500 hover:text-black dark:text-white text-xl">&times;</button>
+      <img src="https://via.placeholder.com/150" class="w-24 h-24 rounded-full mx-auto mb-4" />
+      <h3 class="text-xl font-bold text-blue-800 dark:text-blue-100 text-center">Mukul</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300 text-center mb-4">Networking</p>
+      <p class="text-gray-700 dark:text-gray-200 text-sm mb-4 text-center">Vashali is a software developer passionate about networking, AI, and open-source education.</p>
+      <div class="flex justify-center space-x-4 text-blue-700 dark:text-blue-400 text-xl">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="mailto:rajesh@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add similar modals for other team members -->
+
+  <!-- Footer -->
+  <footer class="fixed bottom-0 left-0 w-full bg-blue-900 text-white py-06 text-center">
+    <p class="mb-4">&copy; 2025 ACM Student Chapter, South Asian University. All rights reserved.</p>
+    <form action="https://formspree.io/f/your-demo-code" method="POST" class="max-w-md mx-auto">
+      <label for="newsletter" class="block mb-2 text-sm">Subscribe to our newsletter</label>
+      <div class="flex items-center">
+        <input id="newsletter" name="email" type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-l-md text-black" required />
+        <button type="submit" class="bg-blue-600 px-4 py-2 rounded-r-md hover:bg-blue-700 transition">Subscribe</button>
+      </div>
+      <p class="text-sm text-gray-300 mt-2">
+        Prefer filling a form?
+        <a href="https://forms.gle/your-google-form-link" target="_blank" class="underline hover:text-white">Click here</a>
+      </p>
+    </form>
+  </footer>
+  <!-- JavaScript -->
+  <script src="Javascript/script.js"></script>
+</body>
+</html>

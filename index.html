@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACM SAU | Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<!-- <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 pt-20 min-h-screen pb-40"> -->
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 pt-20 min-h-screen pb-40 bg-cover bg-center" style="background-image: url('images/bg.png');"></body>
+
+  <!-- Navbar -->
+  <!-- Navbar -->
+<nav class="fixed top-0 left-0 w-full bg-blue-800 text-white p-4 flex justify-between items-center z-50 shadow">
+  <div class="text-xl font-bold">ACM SAU</div>
+
+  <div class="space-x-4 hidden md:flex items-center relative">
+    <a href="index.html" class="hover:underline">Home</a>
+    <a href="about.html" class="hover:underline">About</a>
+    <a href="events.html" class="hover:underline">Events</a>
+    <a href="team.html" class="hover:underline">Team</a>
+    <a href="contact.html" class="hover:underline">Contact</a>
+
+    <!-- Dropdown + Toggle -->
+    <div class="relative flex items-center space-x-3">
+      <!-- Dropdown -->
+      <div class="group relative">
+        <button class="hover:underline">More ▾</button>
+        <div class="absolute top-full right-0 hidden group-hover:block bg-white dark:bg-gray-800 text-black dark:text-white mt-1 w-56 rounded shadow border dark:border-gray-600 z-50">
+          <a href="gallery.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📸 Gallery</a>
+          <a href="news.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📰 News / Blog</a>
+          <a href="resources.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📚 Resources</a>
+          <a href="projects.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">🚀 Projects</a>
+          <a href="workshops.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">🎓 Workshops</a>
+        </div>
+      </div>
+
+      <!-- Dark Mode Toggle -->
+      <button onclick="toggleDarkMode()" class="text-sm bg-gray-700 px-2 py-1 rounded hover:bg-gray-600">🌓</button>
+    </div>
+  </div>
+
+  <button class="md:hidden text-white text-xl" onclick="toggleMenu()">☰</button>
+</nav>
+
+
+  <!-- Responsive Menu for Mobile -->
+  <div id="menu" class="md:hidden hidden bg-blue-800 text-white px-4 pb-4">
+    <a href="index.html" class="block py-2 hover:underline">Home</a>
+    <a href="about.html" class="block py-2 hover:underline">About</a>
+    <a href="events.html" class="block py-2 hover:underline">Events</a>
+    <a href="team.html" class="block py-2 hover:underline">Team</a>
+    <a href="contact.html" class="block py-2 hover:underline">Contact</a>
+    <div class="border-t border-blue-400 mt-2 pt-2">
+      <a href="gallery.html" class="block py-2 hover:underline">📸 Gallery</a>
+      <a href="news.html" class="block py-2 hover:underline">📰 News / Blog</a>
+      <a href="resources.html" class="block py-2 hover:underline">📚 Resources</a>
+      <a href="projects.html" class="block py-2 hover:underline">🚀 Projects</a>
+      <a href="workshops.html" class="block py-2 hover:underline">🎓 Workshops</a>
+    </div>
+    <button onclick="toggleDarkMode()" class="mt-2 text-sm bg-gray-700 px-2 py-1 rounded hover:bg-gray-600 w-full">🌓 Toggle Mode</button>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="max-w-5xl mx-auto py-16 px-4 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold text-blue-900 dark:text-blue-300 mb-6">Welcome to ACM Student Chapter, SAU</h1>
+    <p class="text-lg text-gray-700 dark:text-gray-300 mb-8">Empowering students in computing, innovation, and leadership.</p>
+    <a href="about.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded transition">Learn More</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="fixed bottom-0 left-0 w-full bg-blue-900 text-white py-06 text-center">
+    <p class="mb-4">&copy; 2025 ACM Student Chapter, South Asian University. All rights reserved.</p>
+    <form action="https://formspree.io/f/your-demo-code" method="POST" class="max-w-md mx-auto">
+      <label for="newsletter" class="block mb-2 text-sm">Subscribe to our newsletter</label>
+      <div class="flex items-center">
+        <input id="newsletter" name="email" type="email" placeholder="Your email" class="w-full px-4 py-2 rounded-l-md text-black" required />
+        <button type="submit" class="bg-blue-600 px-4 py-2 rounded-r-md hover:bg-blue-700 transition">Subscribe</button>
+      </div>
+      <p class="text-sm text-gray-300 mt-2">
+        Prefer filling a form?
+        <a href="https://forms.gle/your-google-form-link" target="_blank" class="underline hover:text-white">Click here</a>
+      </p>
+    </form>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+    }
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>

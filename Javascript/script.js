@@ -19,3 +19,23 @@ function toggleDarkMode() {
     }
   });
 }
+
+ // Toggle the mobile menu
+ function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("hidden");
+}
+
+// Toggle dark mode
+function toggleDarkMode() {
+  document.documentElement.classList.toggle('dark');
+}
+
+// Modal open/close
+function openModal(id) {
+  document.getElementById(id).classList.remove("hidden");
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.add("hidden");
+}

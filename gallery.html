@@ -13,47 +13,58 @@
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 pt-20 min-h-screen pb-40">
 
   <!-- Navbar -->
-  <nav class="fixed top-0 left-0 w-full bg-blue-800 text-white p-4 flex justify-between items-center z-50 shadow">
-    <div class="text-xl font-bold">ACM SAU</div>
-    <div class="space-x-4 hidden md:flex items-center relative">
-      <a href="index.html" class="hover:underline">Home</a>
-      <a href="about.html" class="hover:underline">About</a>
-      <a href="events.html" class="hover:underline">Events</a>
-      <a href="team.html" class="hover:underline">Team</a>
-      <a href="contact.html" class="hover:underline">Contact</a>
-      
-      <div class="relative group">
-        <button class="hover:underline">More ▾</button>
-        <div class="absolute right-0 hidden group-hover:block bg-white dark:bg-gray-800 text-black dark:text-white mt-2 w-56 rounded shadow z-50 border dark:border-gray-600">
-          <a href="gallery.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📸 Gallery</a>
-          <a href="news.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📰 News / Blog</a>
-          <a href="resources.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📚 Resources</a>
-          <a href="projects.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">🚀 Projects</a>
-          <a href="workshops.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">🎓 Workshops</a>
-        </div>
-      </div>
-      
-      <button onclick="toggleDarkMode()" class="ml-2 text-sm bg-gray-700 px-2 py-1 rounded hover:bg-gray-600">🌓</button>
-    </div>
-    <button class="md:hidden text-white text-xl" onclick="toggleMenu()">☰</button>
-  </nav>
+<nav class="fixed top-0 left-0 w-full bg-blue-800 text-white p-4 flex justify-between items-center z-50 shadow">
+  <!-- Logo -->
+  <div  class="text-xl font-bold"><a href="index.html">ACM SAU</a></div>
 
-  <!-- Mobile Menu -->
-  <div id="menu" class="md:hidden hidden bg-blue-800 text-white px-4 pb-4">
-    <a href="index.html" class="block py-2 hover:underline">Home</a>
-    <a href="about.html" class="block py-2 hover:underline">About</a>
-    <a href="events.html" class="block py-2 hover:underline">Events</a>
-    <a href="team.html" class="block py-2 hover:underline">Team</a>
-    <a href="contact.html" class="block py-2 hover:underline">Contact</a>
-    <div class="border-t border-blue-400 mt-2 pt-2">
-      <a href="gallery.html" class="block py-2 hover:underline">📸 Gallery</a>
-      <a href="news.html" class="block py-2 hover:underline">📰 News / Blog</a>
-      <a href="resources.html" class="block py-2 hover:underline">📚 Resources</a>
-      <a href="projects.html" class="block py-2 hover:underline">🚀 Projects</a>
-      <a href="workshops.html" class="block py-2 hover:underline">🎓 Workshops</a>
+  <!-- Desktop Menu -->
+  <div class="hidden md:flex items-center space-x-4">
+    <a href="index.html" class="hover:underline">Home</a>
+    <a href="about.html" class="hover:underline">About</a>
+    <a href="events.html" class="hover:underline">Events</a>
+    <a href="team.html" class="hover:underline">Team</a>
+    <a href="contact.html" class="hover:underline">Contact</a>
+
+    <!-- Dropdown -->
+    <div class="group relative">
+      <button class="hover:underline">More ▾</button>
+      <div class="absolute top-full right-0 hidden group-hover:block bg-white dark:bg-gray-800 text-black dark:text-white mt-1 w-56 rounded shadow border dark:border-gray-600 z-50">
+        <a href="gallery.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📸 Gallery</a>
+        <a href="news.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📰 News / Blog</a>
+        <a href="resources.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📚 Resources</a>
+        <a href="projects.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">🚀 Projects</a>
+        <a href="workshops.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">🎓 Workshops</a>
+      </div>
     </div>
-    <button onclick="toggleDarkMode()" class="mt-2 text-sm bg-gray-700 px-2 py-1 rounded hover:bg-gray-600 w-full">🌓 Toggle Mode</button>
+
+    <!-- Dark Mode Toggle (desktop) -->
+    <button onclick="toggleDarkMode()" class="text-sm bg-gray-700 px-2 py-1 rounded hover:bg-gray-600">🌓</button>
   </div>
+
+  <!-- Mobile: Toggle + Hamburger -->
+  <div class="md:hidden flex items-center space-x-3">
+    <!-- Dark mode toggle (mobile) -->
+    <button onclick="toggleDarkMode()" class="text-sm bg-gray-700 px-2 py-1 rounded hover:bg-gray-600">🌓</button>
+    <!-- Hamburger -->
+    <button onclick="toggleMenu()" class="text-xl">☰</button>
+  </div>
+</nav>
+
+<!-- Responsive Menu for Mobile -->
+<div id="menu" class="md:hidden hidden bg-blue-800 text-white px-4 pb-4">
+  <a href="index.html" class="block py-2 hover:underline">Home</a>
+  <a href="about.html" class="block py-2 hover:underline">About</a>
+  <a href="events.html" class="block py-2 hover:underline">Events</a>
+  <a href="team.html" class="block py-2 hover:underline">Team</a>
+  <a href="contact.html" class="block py-2 hover:underline">Contact</a>
+  <div class="border-t border-blue-400 mt-2 pt-2">
+    <a href="gallery.html" class="block py-2 hover:underline">📸 Gallery</a>
+    <a href="news.html" class="block py-2 hover:underline">📰 News / Blog</a>
+    <a href="resources.html" class="block py-2 hover:underline">📚 Resources</a>
+    <a href="projects.html" class="block py-2 hover:underline">🚀 Projects</a>
+    <a href="workshops.html" class="block py-2 hover:underline">🎓 Workshops</a>
+  </div>
+</div>
 
   <!-- Gallery Section -->
   <section class="py-16 px-4 max-w-6xl mx-auto">

@@ -10,62 +10,67 @@
       darkMode: 'class',
     }
   </script>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />  
 </head>
 <!-- <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 pt-20 min-h-screen pb-40"> -->
   <body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 pt-20 min-h-screen pb-40 bg-cover bg-center" style="background-image: url('images/bg.png');"></body>
 
-  <!-- Navbar -->
-  <!-- Navbar -->
-<nav class="fixed top-0 left-0 w-full bg-blue-800 text-white p-4 flex justify-between items-center z-50 shadow">
-  <div class="text-xl font-bold">ACM SAU</div>
 
-  <div class="space-x-4 hidden md:flex items-center relative">
+ <!-- Navbar -->
+<nav class="fixed top-0 left-0 w-full bg-blue-800 text-white p-4 flex justify-between items-center z-50 shadow">
+  <!-- Logo -->
+  <div  class="text-xl font-bold"><a href="index.html">ACM SAU</a></div>
+  <!-- <a href="about.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded transition">Learn More</a> -->
+
+  <!-- Desktop Menu -->
+  <div class="hidden md:flex items-center space-x-4">
     <a href="index.html" class="hover:underline">Home</a>
     <a href="about.html" class="hover:underline">About</a>
     <a href="events.html" class="hover:underline">Events</a>
     <a href="team.html" class="hover:underline">Team</a>
     <a href="contact.html" class="hover:underline">Contact</a>
 
-    <!-- Dropdown + Toggle -->
-    <div class="relative flex items-center space-x-3">
-      <!-- Dropdown -->
-      <div class="group relative">
-        <button class="hover:underline">More ▾</button>
-        <div class="absolute top-full right-0 hidden group-hover:block bg-white dark:bg-gray-800 text-black dark:text-white mt-1 w-56 rounded shadow border dark:border-gray-600 z-50">
-          <a href="gallery.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📸 Gallery</a>
-          <a href="news.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📰 News / Blog</a>
-          <a href="resources.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📚 Resources</a>
-          <a href="projects.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">🚀 Projects</a>
-          <a href="workshops.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">🎓 Workshops</a>
-        </div>
+    <!-- Dropdown -->
+    <div class="group relative">
+      <button class="hover:underline">More ▾</button>
+      <div class="absolute top-full right-0 hidden group-hover:block bg-white dark:bg-gray-800 text-black dark:text-white mt-1 w-56 rounded shadow border dark:border-gray-600 z-50">
+        <a href="gallery.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📸 Gallery</a>
+        <a href="news.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📰 News / Blog</a>
+        <a href="resources.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">📚 Resources</a>
+        <a href="projects.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">🚀 Projects</a>
+        <a href="workshops.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700">🎓 Workshops</a>
       </div>
-
-      <!-- Dark Mode Toggle -->
-      <button onclick="toggleDarkMode()" class="text-sm bg-gray-700 px-2 py-1 rounded hover:bg-gray-600">🌓</button>
     </div>
+
+    <!-- Dark Mode Toggle (desktop) -->
+    <button onclick="toggleDarkMode()" class="text-sm bg-gray-700 px-2 py-1 rounded hover:bg-gray-600">🌓</button>
   </div>
 
-  <button class="md:hidden text-white text-xl" onclick="toggleMenu()">☰</button>
+  <!-- Mobile: Toggle + Hamburger -->
+  <div class="md:hidden flex items-center space-x-3">
+    <!-- Dark mode toggle (mobile) -->
+    <button onclick="toggleDarkMode()" class="text-sm bg-gray-700 px-2 py-1 rounded hover:bg-gray-600">🌓</button>
+    <!-- Hamburger -->
+    <button onclick="toggleMenu()" class="text-xl">☰</button>
+  </div>
 </nav>
 
-
-  <!-- Responsive Menu for Mobile -->
-  <div id="menu" class="md:hidden hidden bg-blue-800 text-white px-4 pb-4">
-    <a href="index.html" class="block py-2 hover:underline">Home</a>
-    <a href="about.html" class="block py-2 hover:underline">About</a>
-    <a href="events.html" class="block py-2 hover:underline">Events</a>
-    <a href="team.html" class="block py-2 hover:underline">Team</a>
-    <a href="contact.html" class="block py-2 hover:underline">Contact</a>
-    <div class="border-t border-blue-400 mt-2 pt-2">
-      <a href="gallery.html" class="block py-2 hover:underline">📸 Gallery</a>
-      <a href="news.html" class="block py-2 hover:underline">📰 News / Blog</a>
-      <a href="resources.html" class="block py-2 hover:underline">📚 Resources</a>
-      <a href="projects.html" class="block py-2 hover:underline">🚀 Projects</a>
-      <a href="workshops.html" class="block py-2 hover:underline">🎓 Workshops</a>
-    </div>
-    <button onclick="toggleDarkMode()" class="mt-2 text-sm bg-gray-700 px-2 py-1 rounded hover:bg-gray-600 w-full">🌓 Toggle Mode</button>
+<!-- Responsive Menu for Mobile -->
+<div id="menu" class="md:hidden hidden bg-blue-800 text-white px-4 pb-4">
+  <a href="index.html" class="block py-2 hover:underline">Home</a>
+  <a href="about.html" class="block py-2 hover:underline">About</a>
+  <a href="events.html" class="block py-2 hover:underline">Events</a>
+  <a href="team.html" class="block py-2 hover:underline">Team</a>
+  <a href="contact.html" class="block py-2 hover:underline">Contact</a>
+  <div class="border-t border-blue-400 mt-2 pt-2">
+    <a href="gallery.html" class="block py-2 hover:underline">📸 Gallery</a>
+    <a href="news.html" class="block py-2 hover:underline">📰 News / Blog</a>
+    <a href="resources.html" class="block py-2 hover:underline">📚 Resources</a>
+    <a href="projects.html" class="block py-2 hover:underline">🚀 Projects</a>
+    <a href="workshops.html" class="block py-2 hover:underline">🎓 Workshops</a>
   </div>
+</div>
+
 
   <!-- Hero Section -->
   <section class="max-w-5xl mx-auto py-16 px-4 text-center">
